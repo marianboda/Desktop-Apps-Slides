@@ -1,0 +1,22 @@
+<!DOCTYPE html(lang='en')><head><meta charset="utf-8"/>&#x9;&#x9;<title>reveal.js - The HTML Presentation Framework</title>&#x9;&#x9;<meta name="description" content="A framework for easily creating beautiful presentations using HTML"/>&#x9;&#x9;<meta name="author" content="Hakim El Hattab"/>&#x9;&#x9;<meta name="apple-mobile-web-app-capable" content="yes"/>&#x9;&#x9;<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>&#x9;&#x9;<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>&#x9;&#x9;<link rel="stylesheet" href="css/reveal.css"/>&#x9;&#x9;<link id="theme" rel="stylesheet" href="css/theme/black.css"/><!-- Code syntax highlighting--><link rel="stylesheet" href="lib/css/zenburn.css"/><link href="css/c3.css" rel="stylesheet" type="text/css"/><link href="css/app.css" rel="stylesheet" type="text/css"/><script src="js/jquery.js"></script><script src="js/d3.js" charset="utf-8"></script><script src="js/c3.js">   // Printing and PDF exports</script><script src="js/app.js"></script><script>var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--if lt IE 9script(src='lib/js/html5shiv.js')--></head>&#x9;<body><div class="reveal"><!-- Any section element inside of this container is displayed as a slide--><div class="slides"><section><h1>Desktop Apps with Web Technologies</h1><p><small>Created by&nbsp;<a href="#">Marián Boďa</a> /<a href="#">@marianboda</a></small></p></section><section><h2>Web Technologies</h2><p><ul><li>HTML5 + CSS</li><li>JavaScript</li><li>...</li></ul></p></section><section><h2>Web Technologies</h2><ul><li>NW.js (Node-Webkit)</li><li>Atom Shell</li><li>Brackets Shell</li></ul></section><section><h2>Trends</h2><small>Trending repositories on GitHub for last month</small><div id="chart"></div></section><section><h2>why?</h2><ul><li></li><li>Developer tools</li></ul></section><section><h2>priklady realnych apps</h2><ul><li>Atom</li><li>Brackets</li><li>Popcorn Time</li></ul></section><section><ul><li>io.js</li><li>chromium</li></ul></section><section><h2>rozdiely atom vs nw</h2></section><section><h2>packaging</h2></section><section><h2>disadvantages</h2></section><section></section></div></div>&#x9;&#x9;<script src="lib/js/head.min.js"></script>&#x9;&#x9;<script src="js/reveal.js"></script>&#x9;&#x9;<script>// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
+transition: 'slide', // none/fade/slide/convex/concave/zoom
+// Optional reveal.js plugins
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'plugin/zoom-js/zoom.js', async: true },
+{ src: 'plugin/notes/notes.js', async: true }
+]
+});</script></body>

@@ -1,0 +1,65 @@
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+    | &#x9;&#x9;
+    title reveal.js - The HTML Presentation Framework
+    | &#x9;&#x9;
+    meta(name='description', content='A framework for easily creating beautiful presentations using HTML')
+    | &#x9;&#x9;
+    meta(name='author', content='Hakim El Hattab')
+    | &#x9;&#x9;
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    | &#x9;&#x9;
+    meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+    | &#x9;&#x9;
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='css/reveal.css')
+    | &#x9;&#x9;
+    link#theme(rel='stylesheet', href='css/theme/black.css')
+    // Code syntax highlighting
+    link(rel='stylesheet', href='lib/css/zenburn.css')
+    link(href='css/c3.css', rel='stylesheet', type='text/css')
+    link(href='css/app.css', rel='stylesheet', type='text/css')
+    script(src='js/jquery.js')
+    script(src='js/d3.js', charset='utf-8')
+    script(src='js/c3.js')    // Printing and PDF exports
+    script(src='js/app.js')
+    script.
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    //if lt IE 9
+      script(src='lib/js/html5shiv.js')
+  | &#x9;
+body
+  .reveal
+    // Any section element inside of this container is displayed as a slide
+    .slides
+      include ./slides.jade
+  | &#x9;&#x9;
+  script(src='lib/js/head.min.js')
+  | &#x9;&#x9;
+  script(src='js/reveal.js')
+  | &#x9;&#x9;
+  script.
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+    // Optional reveal.js plugins
+    dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true },
+    { src: 'plugin/notes/notes.js', async: true }
+    ]
+    });
